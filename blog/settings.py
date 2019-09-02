@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1:8000',
+    '127.0.0.1',
     'blogtestappci.herokuapp.com'
 ]
 
@@ -48,16 +48,17 @@ INSTALLED_APPS = [
     'posts',
 ]
 
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+
+MIDDLEWARE = MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
 
 ROOT_URLCONF = 'blog.urls'
 
