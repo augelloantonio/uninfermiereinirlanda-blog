@@ -29,36 +29,37 @@
 
 <body>
     <!-- Navigation -->
-    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar-grey-transparent">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="{% url 'index' %}">Un Infermiere in Irlanda</a>
+                <a class="navbar-brand navbar-text" href="{% url 'index' %}">Un Infermiere in Irlanda</a>
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto ">
                     {% if user.is_superuser %}
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'new_post' %}">New Post</a></li>
+                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'new_post' %}">New Post</a>
+                    </li>
                     {% endif %} {% if user.is_authenticated %}
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'profile' %}"><i
+                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'profile' %}"><i
                                 class="fa fa-user"></i>
                             Profile</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'logout' %}"><i
+                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'logout' %}"><i
                                 class="fas fa-sign-out-alt"></i>
                             Log
                             Out</a></li>
                     {% else %}
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'register' %}"><i
+                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'register' %}"><i
                                 class="fa fa-user-plus"></i>
                             Register</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'login' %}"><i
+                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'login' %}"><i
                                 class="fas fa-sign-in-alt"></i> Log
                             In</a></li>
                     {% endif %}
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'get_posts' %}">
+                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'get_posts' %}">
                             Blog</a></li>
                 </ul>
             </div>
@@ -66,6 +67,12 @@
     </nav>
     <!-- /End Navigation -->
 
+    <!--Logo-->
+    <div id='logo'>
+        <img class="logopage" src="http://uninfermiereinirlanda.altervista.org/images/logopage.jpg" alt="logo"
+            style="width: 100%;">
+    </div>
+    <!--./Logo-->
 
     <div class="container">
         <div class="container-personal">
