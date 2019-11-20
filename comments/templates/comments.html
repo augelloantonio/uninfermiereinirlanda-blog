@@ -1,0 +1,46 @@
+{% load static %}
+
+<!--Product comments-->
+<div class="container-fluid">
+    <div id="view_comments">
+        <h3>Commenti</h3>
+        {% if user.is_authenticated %}
+        {% include 'addcomment.html' %}
+        {% else %}
+        <p><a href="{% url 'login'%}">Accedi</a> per aggiungere un commento</p>
+        {% endif %}
+        <!-- Check if product has comment-->
+        {% if comment_list%}
+        <div class="row">
+            {% for comment in comments %}
+            <!-- comment cards-->
+            <div class="col-12 mt-2 mb-2">
+                <div class="mainflip h-100">
+                    <div class="frontside h-100">
+                        <div class="card h-100">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-3 text-center">
+                                    <a class="story-img" href="#">
+                                        <img src="/media/img/profile.jpg" class="img-circle">
+                                    </a>
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <div class="card-body text-center h-100">
+                                        <h4 class="card-title">{{ comment.user }}</h4>
+                                        <p class="card-text">{{ comment.content }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% else %}
+            <p>Non ci sono commenti per questo post.</p>
+            {% endif %}
+        </div>
+
+    </div>
+</div>

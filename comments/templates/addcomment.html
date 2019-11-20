@@ -1,0 +1,11 @@
+{% load bootstrap_tags %}
+
+<div class="container">
+    <div class="add_comment">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <button type="submit" class="btn btn-info">Add Comment</button>
+        </form>
+    </div>
+</div>
