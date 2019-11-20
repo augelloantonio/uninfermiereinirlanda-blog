@@ -18,10 +18,17 @@ from django.urls import path, include, re_path
 from django.views.generic import RedirectView
 from django.views.static import serve
 from .settings import MEDIA_ROOT
+from home.views import index
+from home import urls as urls_home
+from accounts import urls as urls_accounts
+from posts import urls as urls_posts
+
 
 urlpatterns = [
+    path('', index, name='index'),
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='posts/')),
-    path('posts/', include('posts.urls')),
+    path('home/', include(urls_home)),
+    path('accounts/', include(urls_accounts)),
+    path('posts/', include(urls_posts)),
     re_path('media/(?P<path>.*)', serve, {'document_root': MEDIA_ROOT}),
 ]
