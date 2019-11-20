@@ -30,9 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'blogtestappci.herokuapp.com'
-]
+    '127.0.0.1']
 
 
 # Application definition
@@ -49,6 +47,7 @@ INSTALLED_APPS = [
     'accounts',
     'posts',
     'home',
+    'django_summernote',
 ]
 
 
@@ -130,6 +129,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+AUTHENTICATION_BACKENDS = [
+    'accounts.backends.CaseInsensitiveAuth',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -153,3 +158,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MESSAGGE_STORAGE = 'django.contrib.messages.storage.session.Sessionstorage'
+
+# Set Email Backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.getenv('EMAIL_ADDRESS')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
+EMAIL_PORT = 587
+
+
+# Summernote
+
+SUMMERNOTE_THEME = 'bs4'

@@ -27,6 +27,7 @@ from posts import urls as urls_posts
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
     path('home/', include(urls_home)),
     path('accounts/', include(urls_accounts)),
     path('posts/', include(urls_posts)),
