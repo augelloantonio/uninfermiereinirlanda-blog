@@ -41,7 +41,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_superuser %}
-                    <li class="nav-item active"><a href="{% url 'new_post' %}">New Post</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{% url 'new_post' %}">New Post</a></li>
                     {% endif %} {% if user.is_authenticated %}
                     <li class="nav-item active"><a class="nav-link" href="{% url 'profile' %}"><i
                                 class="fa fa-user"></i>
@@ -58,6 +58,8 @@
                                 class="fas fa-sign-in-alt"></i> Log
                             In</a></li>
                     {% endif %}
+                    <li class="nav-item active"><a class="nav-link" href="{% url 'get_posts' %}">
+                            Blog</a></li>
                 </ul>
             </div>
         </div>

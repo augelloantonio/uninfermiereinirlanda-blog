@@ -1,7 +1,397 @@
 {% extends "base.html" %}
-{% load bootstrap_tags %}
+{% load static %}
+
 {% block content %}
 
-<h1> Home </h1>
+<h1> Fáilte su Un Infermiere In Irlanda </h1>
 
+<div class="container-fluid">
+    <!--Section info-->
+    <div>
+        <h3>Chi è Un Infermiere in Irlanda?</h3>
+
+        <p>Un Infermiere in Irlanda è un infermiere italiano, un infermiere qualunque tra coloro che lasciano l'Italia
+            in
+            cerca
+            di fortuna o in cerca di quel riconoscimento che non ci è concesso nel nostro Paese, ma anche in cerca di
+            un'esperienza di vita nuova, diversa.
+
+            Questa piattaforma e' un punto di incontro tra gli infermieri italiani in Irlanda o che vorrebbero
+            trasferirsi
+            qui.
+        </p>
+    </div>
+    <!--./Section info-->
+
+    <!--NMBI-->
+    <div>
+
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    <h3 class="pb-3 mb-4 font-italic border-bottom"> Un Infermiere in Irlanda</h3>
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">NMBI - Nursing and Midwifery Board of Ireland
+                        </h2>
+
+                        <img src="{% static 'img/logo.png' %}" alt="logo" />
+                        <br>
+                        <p>
+                            <a href="http://www.nmbi.ie/Home" target="_blank">NMBI</a> - Nursing and Midwifery Board of
+                            Ireland – E’ l’equivalente del <abbr title="Nursing and Midwifery Council">NMC</abbr>
+                            Inglese, paragonabile alla Federazione IPASVI italiana (ora <abbr
+                                title="Federazione nazionale degli Ordini delle Professioni infermieristiche">FNOPI</abbr>).
+                        </p>
+
+                        <p id="definizione" lang:"eng"><em>
+                                The Nursing and Midwifery Board of Ireland (NMBI) is the independent, statutory
+                                organisation that
+                                regulates the nursing and midwifery professions in Ireland. We aim to protect patients
+                                and improve
+                                nursing and midwifery education and practice in Ireland. We provide guidance to nurses
+                                and midwives on
+                                achieving and exceeding high standards of practice. </em>
+                        </p>
+                        <br>
+                        <blockquote>
+                            <p>
+                                Per poter esercitare la professione di Infermiere in Irlanda bisogna necessariamente
+                                essere registrati al NMBI ed avere il proprio Pin Number
+                                (proprio come in Italia con l'IPASVI).
+                            </p>
+                            <p>
+                                La registrazione può sembrare lunga e difficoltosa, ci sono molti documenti necessari e
+                                molti passaggi da effettuare, ma, seguendo questa guida
+                                il tutto sarà molto più facile e soprattutto risparmierete moltissimo tempo.
+                            </p>
+                        </blockquote>
+                    </div>
+
+                    <hr>
+
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">La registrazione </h2>
+
+                        <p>
+                            Per ottenere il Pin Number dunque bisogna registrarsi al NMBI e per poterlo fare è
+                            necessario
+                            richiedere l'<a
+                                href="https://www.nmbi.ie/Registration/Trained-outside-Ireland/Application-Process/Application-Request-Form"
+                                target="_blank">Overseas Registration Application Request Form</a>
+                            (<a href="https://www.nmbi.ie/NMBI/media/NMBI/Forms/Overseas-Registration-Application-Request-Form_1.pdf?ext=.pdf"
+                                target="_blank" download>clicca qui</a> per il download diretto),
+                            che consiste nel modulo di richiesta per avere l'application form vero e proprio.
+                        </p>
+                        <p>Andiamo quindi a vedere direttamente come compilare questo modulo.</p>
+
+                        <p>Aprendo il modulo avremo inizialmente la sezione dei dati personali (sez. A), compilabile
+                            velocemente. <br>
+                            Subito dopo troverete la sezione <em>TRF/OET Number</em> (sez. B) che consiste nel numero
+                            identificativo del vostro certificato IELTS/OET che, così come in UK, <u>è diventato
+                                obbligatorio</u> per tutti a partire dal 2 Aprile 2018, tranne per chi ha richiesto
+                            l'Application prima di tale data o, ovviamente, chi è già in possesso del PIN Number.
+                            Questo cambio renderà la registrazione più complicata da ora in avanti e vi metterà
+                            maggiormente davanti la scelta "UK o Irlanda?"<br>
+                            Ma andiamo avanti con la sezione B del nostro modulo.
+                        </p>
+
+                        <figure id="image">
+                            <img src="{% static 'img/sezb.png' %}" alt="Sezione B" />
+                        </figure>
+
+
+                        <p>Qui dovrete inserire il TRF Number/OET Candidate Number. Nel caso dello IELTS si tratta di un
+                            codice composto di 15-18 caratteri alpha numerici che troverete in basso a destra sul vostro
+                            certificato IELTS.<br>
+                            Nel caso dell'OET Candidate Number si tratta di un codice di 9 cifre presente al di sotto
+                            del vostro nome nel foglio contenente l'OET Statement of Results.</p>
+
+                        <p><b> N.B.: Prima di applicare per il NMBI siate sicuri di avere i requisiti minimi linguistici
+                                come segue:</b></p>
+
+                        <figure id="image3">
+                            <img src="{% static 'img/ieltsscore.jpg' %}" alt="Ielts Score" />
+                            <figcaption>
+                                <li>Punteggio IELTS necessario</li>
+                            </figcaption>
+
+                        </figure>
+
+                        <figure id="image3">
+                            <img src="{% static 'img/oetscore.jpg' %}" alt="OET Score" />
+                            <figcaption>
+                                <li>Punteggio OET necessario</li>
+                            </figcaption>
+                        </figure>
+
+                        <p>Non raggiungete tale punteggio? Aspettate ad iniziare il processo di registrazione! La
+                            registrazione infatti deve essere effettuata solo se si possiede il punteggio minimo
+                            richiesto. In caso contrario <em>la vostra richiesta verrà annullata e non verrete
+                                rimborsati della rata pagata!</em></p>
+
+
+                        <p>A questo punto ci troveremo davanti la sezione D da compilare, come da seguente foto:</p>
+
+
+                        <figure id="image">
+                            <img src="{% static 'img/sezD.jpg' %}" alt="Sezione D" />
+                        </figure>
+
+                        <p>
+                            Qui vi è richiesto di inserire i dati di una carta di credito per il pagamento di 350€,
+                            ovvero una quota della tassa di iscrizione per il NMBI
+                            (ci sono due quote, parleremo della seconda in seguito), obbligatoria per poter ricevere
+                            l'application.
+                        </p>
+                        <p><b>
+                                Potrete usare una qualsiasi carta del circuito Visa, Visa Debit o MasterCard.</b></p>
+
+                        <p> Ed ora una domanda che in molti si pongono: <strong><em>Posso utilizzare la
+                                    Postepay?</em></strong> La risposta è si!.</p>
+
+                        <p>Un'altra domanda molto frequente a cui voglio dare una risposta è la seguente:<br>
+                            <b><em>Posso inserire i dati della mia Postepay anche se al momento non ho soldi
+                                    caricati?</em></b> La risposta è nuovamente si!
+                            Infatti il NMBI prenderà i soldi dopo alcuni giorni (di solito passano 1 o 2 settimane),
+                            quindi avete tempo di fare una ricarica sulla vostra prepagata.
+
+                        </p>
+                        <p>Ed ora? Ora dovete inviare il tutto all' indirizzo che segue:
+                            <p />
+                            <address><em><a name="address">
+                                        <p>An Bord Altranais<br>
+                                            18/20 Carysfort Avenue<br>
+                                            Blackrock<br>
+                                            Co Dublin<br>
+                                            Ireland</p>
+                                    </a></em></address>
+                            </address>
+
+                            <p>
+                                Ora puoi scegliere il metodo di spedizione che più preferisci, io raccomando il metodo
+                                postale <em>Postapriority Internazionale</em>,
+                                che impiega circa 3 giorni lavorativi (esclusi sabato e festivi) oltre il giorno di
+                                spedizione ed ha un costo di 7€ circa.
+                            </p>
+                    </div>
+
+                    <hr>
+                    <div class="logopage" align="center">
+                        <script type="text/javascript">
+                            /* <![CDATA[ */
+                            document.write('<s' +
+                                'cript type="text/javascript" src="//en.ad.altervista.org/js.ad/size=300X250/?ref=' +
+                                encodeURIComponent(location.hostname + location.pathname) + '&r=' + new Date()
+                                .getTime() + '"></s' + 'cript>');
+                            /* ]]> */
+                        </script>
+                    </div>
+                    <hr>
+
+
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">L'Application Form </h2>
+                        <figure id="application">
+                            <img src="{% static 'img/application.png' %}" alt="application" />
+                        </figure>
+
+
+                        <p>
+                            Dopo 2 o 3 settimane, se avete seguito tutte le istruzioni e se non ci sono ritardi con il
+                            servizio di spedizione dovreste finalmente ricevere il vostro Application Pack.
+                        </p>
+
+                        <p><strong>
+                                Prima di continuare consiglio di leggere attentamente la <a
+                                    href="https://www.nmbi.ie/NMBI/media/NMBI/Publications/Overseas-guide-for-applicants_updated_Jan2018_1.pdf?ext=.pdf"
+                                    target="_blank">Guida Ufficiale</a>.
+                            </strong></p>
+
+                        <p>
+                            Tornando a noi, abbiamo finalmente tra le mani il nostro Application Pack. Ora sorge il
+                            problema, come compilarlo? Non preoccupatevi, qui vi dirò tutto passo dopo passo.
+                        </p>
+
+                        <p>
+                            Ora dobbiamo innanzitutto andare a regisrarci sul sito del NMBI, per creare un nuovo account
+                            potete <a href="https://www.nmbi.ie/create-account" target="_blank">cliccare qui</a>.
+                            <br>
+                            Vi troverete davanti a questa schermata:
+                            <br><br>
+                            <figure id="image2">
+                                <img src="{% static 'img/account.jpg' %}" alt="Account" />
+                            </figure>
+                        </p>
+
+                        <p>
+                            Come potete vedere anche dall'immagine qui sopra per la registrazione sono necessari due
+                            dati di accesso:
+                            <br>
+                            <ul>
+                                <strong></strong>
+                                <li>PIN/Reference Number</li>
+                                <li>Codice Personale di Sicurezza</li>
+                                </strong>
+                            </ul>
+                        </p>
+                        <p>
+                            Il Pin/Reference Number è il codice che trovate in alto a destra sulla copertina del nostro
+                            application ed in alto
+                            a destra su ogni pagina dello stesso.
+                        </p>
+
+                        <p>Il Personal Security Code è il codice che trovate a pag.3 in basso a sinistra.</p>
+
+                        <p>
+                            Ora il dubbio è: <em>A che serve registrarsi?</em>
+                            Le motivationi principali sono le sequenti:
+                            <ul>
+                                <li>Tracciare lo stato della propria applicazione</li>
+                                <li>Gestire i propri dati personali</li>
+                                <li>Richiedere certificati</li>
+                                <li>Controllare lo stato della propria registrazione e pagare la rata annuale</li>
+                            </ul>
+                        </p>
+
+                        <hr>
+
+                        <h3>Documenti Necessari</h3>
+
+                        <p>I documenti necessari sono parecchi e vanno inviati in due differenti plichi, uno va inviato
+                            di persona ed uno va inviato tramite un'autorità competente, in questo caso l'IPASVI
+                            (FNOPI).<br> Per facilitarvi ho deciso di dividerli qui di seguito raggruppati come
+                            dovrebbero essere inviati.</p>
+
+                        <p>I documenti da inviare di persona saranno:
+                            <ul>
+                                <li>Copia certificata di carta d'identità/passaporto</li>
+                                <li>Application compilato nel Form A</li>
+                                <li>Certificato di nascita internazionale (per chi usa la carta d'identità)</li>
+                                <li>1 fototessera formato passaporto con nome e codice sul retro</li>
+                            </ul>
+                        </p>
+
+                        <p>I documenti che invierà l'Ipasvi invece saranno:
+                            <ul>
+                                <li>Certificato di Onorabilità (Good Standing) e Certificato di Conformità (g2 e g4) in
+                                    forma originale e tradotta con relativa certificazione di traduzione </li>
+                                <li>Copia certificata del certificato di iscrizione all'albo e copia originale</li>
+                                <li>Form C compilato</li>
+                            </ul>
+                        </p>
+                        <r />
+                        <p>Tutti i documenti non redatti originalmente in lingua inglese dovranno essere affiancati da
+                            una traduzione effettuata da un traduttore ufficiale, copia certificata (non è necessario
+                            andare in tribunale a far timbrare dal giudice i documenti).</p>
+
+                        <blockquote>
+                            <p>
+                                <strong>N.B.</strong>: se non si ha il passaporto bisogna utilizzare una fotocopia della
+                                carta d’identità che deve essere certificata dal comune/tribunale/avvocato e tradotta ed
+                                il certificato di nascita internazionale (essendo internazionale appunto non serve farlo
+                                tradurre).
+                            </p>
+                        </blockquote>
+                        <p>
+                            Tutti questi documenti dovranno essere inseriti, insieme al form debitamente compilato, in
+                            una busta chiusa e rinviati all’ABA/NMBI: <em>An Bord Altranais, 18/20 Carysfort Avenue,
+                                Blackrock, Co Dublin, Ireland.</em>
+                        </p>
+                        <p>
+                            N.B.: Il <strong>G2</strong> ed il <strong>G4</strong> vanno richiesti al Ministero della
+                            Salute e possono essere scaricati qui a seguire:</p>
+                        <ul>
+                            <li> <a href="http://www.salute.gov.it/portale/ministro/p4_8_0.jsp?lingua=italiano&label=servizionline&idMat=PROFS&idAmb=RTI&idSrv=AG2&flag=P"
+                                    target="_blank">G2 o Attestato di Conformità</a></li>
+                            <li><a href="http://www.salute.gov.it/portale/ministro/p4_8_0.jsp?label=servizionline&idMat=PROFS&idAmb=RTI&idSrv=AGGS&flag=P"
+                                    target="_blank">G4 o Certificato di onorabilità professionale (Good standing)</a>
+                            </li>
+                        </ul>
+
+                        <p>
+                            I documenti possono essere inviati in unica busta all’ <a href="#address">indirizzo su
+                                indicato.</a>
+                        </p>
+
+                        <p>
+                            <h6>Altri Documenti che potrebbero essere utili ma non servono per l'NMBI:</h6>
+                        </p>
+                        <ul>
+                            <li>Certificato Generale del Casellario giudiziale - Richiesto dall'HSE, valido 6 mesi</li>
+                            <li>Certificato vaccinazioni - Richiesto dall'HSE</li>
+                        </ul>
+
+                        <h5>Passi finali</h5>
+
+                        <p>Dopo aver inviato tutti i documenti dovrete aspettare alcuni giorni/settimane che il NMBI
+                            riceva i vostri documenti e li controlli, il processo potrebbe durare anche mesi. In questo
+                            lasso di tempo potrete verificare sulla vostra pagina personale del sito del NMBI
+                            l'avanzamento della richiesta.</p>
+                        <p>Se tutto è andato a buon fine vi verrà inviato per email o per posta il Credit/Debit Mandate,
+                            ovvero il documento con cui vi verranno richiesti nuovamente i dati della vostra Carda di
+                            Credico/Debito per effettuare il pagamento di 145€, ovvero l'ultimo pagamento prima di
+                            ricevere la vostra Decision Letter.</p>
+
+                    </div><!-- /.blog-post -->
+
+
+                    <hr>
+                    <br><br>
+                    <p>Hai riscontrato un link non funzionante? Hai suggerimenti su miglioramenti o correzioni? Hai
+                        bisogno di qualche spiegazione a riguardo? <a href="contatti.html" target="_top">Contattami!</a>
+                    </p>
+
+                </div><!-- /.blog-main -->
+
+
+                <aside class="col-md-4 blog-sidebar">
+                    <div class="p-3 mb-3 bg-light rounded">
+                        <h4 class="font-italic">About</h4>
+                        <p class="mb-0"> Questo sito web rappresenta tutti noi e voi che avete deciso di partire ed
+                            affrontare un'esperienza di vita e lavorativa in quest'isola. Questo sito non è
+                            semplicemente una guida o un blog, ma una comunità.</p>
+                    </div>
+
+
+
+                    <div class="p-3">
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Funinfermiereinirlanda%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                            width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowTransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+
+                    <!--adverts-->
+                    <div class="p-3 logopage">
+                        <div align="center">
+                            <script type="text/javascript">
+                                /* <![CDATA[ */
+                                document.write('<s' +
+                                    'cript type="text/javascript" src="//en.ad.altervista.org/js.ad/size=300X250/?ref=' +
+                                    encodeURIComponent(location.hostname + location.pathname) + '&r=' + new Date()
+                                    .getTime() + '"></s' + 'cript>');
+                                /* ]]> */
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="p-3 mb-3 bg-light rounded">
+                        <h4 class="font-italic">Traduttori consigliati</h4>
+                        <p class="mb-0"> Sei un traduttore/traduttrice e vorresti pubblicità nel mio sito? Contattami
+                            per email per avere uno spazio pubblicitario.</p>
+                    </div>
+
+                    <div class="p-3 mb-3 bg-light rounded">
+                        <h4 class="font-italic">Agenzie consigliate</h4>
+                        <p class="mb-0"> Gestisci un'agenzia di reclutamento e vorresti uno spazio pubblicitario nel mio
+                            sito? Contattami per email.</p>
+                    </div>
+
+                </aside>
+
+            </div><!-- /.row -->
+        </main><!-- /.container -->
+    </div>
+    <!--./NMBI-->
+</div>
 {% endblock %}
