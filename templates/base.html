@@ -18,12 +18,11 @@
         })();
     </script>
 
-
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!--Personal CSS-->
-    <link rel="stylesheet" href="{% static 'scss/blog/main.css' %}">
+    <link rel="stylesheet" href="{% static 'scss/main.css' %}">
 
 
 </head>
@@ -37,7 +36,7 @@
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="{% url 'index' %}">BuyIt</a>
+                <a class="navbar-brand" href="{% url 'index' %}">Un Infermiere in Irlanda</a>
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -65,28 +64,24 @@
     </nav>
     <!-- /End Navigation -->
 
+
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel">
-                    <div class="panel-body">
-                        <!--blogpost entries-->
-                        {% block content %}
-                        {% endblock %}
-                        <!--blogpost entries-->
-                    </div>
-                </div>
-            </div>
+        <div class="container-personal">
+
+            {% block content %}
+            {% endblock %}
+
         </div>
     </div>
+    <!--./Main Container-->
+
     <!-- Footer -->
     <div class="mt-5 pt-5 footer bg-dark bottom">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-xs-12">
                     <h2>Nurses</h2>
-                    <p class="pr-5 text-white-50">Take Advantage of our FREE Deliveries for orders over 49.99 <i
-                            class="fas fa-euro-sign"></i>. </p>
+                    <p class="pr-5 text-white-50">Some description here<i class="fas fa-euro-sign"></i>. </p>
                     <ul class="list-inline footer-social-links">
                         <li><a href="#" target="_blank" class="mr-3"><i class="fab sfa-facebook"></i></a></li>
                         <li><a href="https://www.linkedin.com/in/antonio-augello-aba83911a/" target="_blank"><i
@@ -132,8 +127,7 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/4.2.5/jquery.bootstrap-touchspin.min.js">
-    </script>
+
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}">
     </script>
 
