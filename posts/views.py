@@ -7,7 +7,7 @@ from comments.models import Comment
 from comments.forms import CommentForm
 
 
-def get_posts(request):
+def get_blog(request):
     """
     Create a view that will return a list
     of Posts that were published prior to 'now'

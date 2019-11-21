@@ -22,6 +22,7 @@ from home.views import index
 from home import urls as urls_home
 from accounts import urls as urls_accounts
 from posts import urls as urls_posts
+from experiences import urls as urls_experiences
 
 
 urlpatterns = [
@@ -30,6 +31,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('home/', include(urls_home)),
     path('accounts/', include(urls_accounts)),
-    path('posts/', include(urls_posts)),
+    path('blog/', include(urls_posts)),
+    path('esperienze', include(urls_experiences)),
     re_path('media/(?P<path>.*)', serve, {'document_root': MEDIA_ROOT}),
 ]
