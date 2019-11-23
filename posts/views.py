@@ -41,7 +41,7 @@ def post_detail(request, pk):
 
     for comment in comments:
         comment_list = Comment.objects.all().order_by(
-            '-pub_date').filter(post__id=post.id)
+            '-pub_date').filter(post_id=post.pk)
 
     # add comment
     form = CommentForm(request.POST)

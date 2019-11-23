@@ -32,7 +32,7 @@ class TestHomeView(TestCase):
 
     def test_get_contact_us_views(self):
         '''Test contact us page view'''
-        page = self.client.get("/home/contactus", follow=True)
+        page = self.client.get("/home/contatti", follow=True)
 
         # check there is a status code of 200
         self.assertEqual(page.status_code, 200)

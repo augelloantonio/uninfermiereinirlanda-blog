@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!--List Urls-->
+<ul>
+    <li><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
+    <li><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
+    <li><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
+    <li><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
+    <li><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi Finali</a></li>
+</ul>
+<!--./List Urls-->
+
+<!--NMBI-->
+<div class="blog-post">
+    <h2 class="blog-post-title">NMBI - Nursing and Midwifery Board of Ireland
+    </h2>
+
+    <img src="{% static 'img/logo.png' %}" alt="logo" />
+    <br>
+    <p>
+        <a href="http://www.nmbi.ie/Home" target="_blank">NMBI</a> - Nursing and Midwifery Board of
+        Ireland – E’ l’equivalente del <abbr title="Nursing and Midwifery Council">NMC</abbr>
+        Inglese, paragonabile alla Federazione IPASVI italiana (ora <abbr
+            title="Federazione nazionale degli Ordini delle Professioni infermieristiche">FNOPI</abbr>).
+    </p>
+
+    <p id="definizione" lang:"eng"><em>
+            The Nursing and Midwifery Board of Ireland (NMBI) is the independent, statutory
+            organisation that
+            regulates the nursing and midwifery professions in Ireland. We aim to protect patients
+            and improve
+            nursing and midwifery education and practice in Ireland. We provide guidance to nurses
+            and midwives on
+            achieving and exceeding high standards of practice. </em>
+    </p>
+    <br>
+    <blockquote>
+        <p>
+            Per poter esercitare la professione di Infermiere in Irlanda bisogna necessariamente
+            essere registrati al NMBI ed avere il proprio Pin Number
+            (proprio come in Italia con l'IPASVI).
+        </p>
+        <p>
+            La registrazione può sembrare lunga e difficoltosa, ci sono molti documenti necessari e
+            molti passaggi da effettuare, ma, seguendo questa guida
+            il tutto sarà molto più facile e soprattutto risparmierete moltissimo tempo.
+        </p>
+    </blockquote>
+</div>
+<!--./NMBI-->
+
+{% endblock %}

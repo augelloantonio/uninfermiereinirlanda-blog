@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!--List Urls-->
+<ul>
+    <li><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
+    <li><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
+    <li><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
+    <li><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
+    <li><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi Finali</a></li>
+</ul>
+<!--./List Urls-->
+
+<!--La Registrazione-->
+<div class="row">
+    <div class="blog-post">
+        <h2 class="blog-post-title">La registrazione </h2>
+
+        <p>
+            Per ottenere il Pin Number dunque bisogna registrarsi al NMBI e per poterlo fare è
+            necessario
+            richiedere l'<a
+                href="https://www.nmbi.ie/Registration/Trained-outside-Ireland/Application-Process/Application-Request-Form"
+                target="_blank">Overseas Registration Application Request Form</a>
+            (<a href="https://www.nmbi.ie/NMBI/media/NMBI/Forms/Overseas-Registration-Application-Request-Form_1.pdf?ext=.pdf"
+                target="_blank" download>clicca qui</a> per il download diretto),
+            che consiste nel modulo di richiesta per avere l'application form vero e proprio.
+        </p>
+        <p>Andiamo quindi a vedere direttamente come compilare questo modulo.</p>
+
+        <p>Aprendo il modulo avremo inizialmente la sezione dei dati personali (sez. A), compilabile
+            velocemente. <br>
+            Subito dopo troverete la sezione <em>TRF/OET Number</em> (sez. B) che consiste nel numero
+            identificativo del vostro certificato IELTS/OET che, così come in UK, <u>è diventato
+                obbligatorio</u> per tutti a partire dal 2 Aprile 2018, tranne per chi ha richiesto
+            l'Application prima di tale data o, ovviamente, chi è già in possesso del PIN Number.
+            Questo cambio renderà la registrazione più complicata da ora in avanti e vi metterà
+            maggiormente davanti la scelta "UK o Irlanda?"<br>
+            Ma andiamo avanti con la sezione B del nostro modulo.
+        </p>
+
+        <figure id="image">
+            <img src="{% static 'img/sezb.png' %}" alt="Sezione B" />
+        </figure>
+
+
+        <p>Qui dovrete inserire il TRF Number/OET Candidate Number. Nel caso dello IELTS si tratta di un
+            codice composto di 15-18 caratteri alpha numerici che troverete in basso a destra sul vostro
+            certificato IELTS.<br>
+            Nel caso dell'OET Candidate Number si tratta di un codice di 9 cifre presente al di sotto
+            del vostro nome nel foglio contenente l'OET Statement of Results.</p>
+
+        <p><b> N.B.: Prima di applicare per il NMBI siate sicuri di avere i requisiti minimi linguistici
+                come segue:</b></p>
+
+        <figure id="image3">
+            <img src="{% static 'img/ieltsscore.jpg' %}" alt="Ielts Score" />
+            <figcaption>
+                <li>Punteggio IELTS necessario</li>
+            </figcaption>
+
+        </figure>
+
+        <figure id="image3">
+            <img src="{% static 'img/oetscore.jpg' %}" alt="OET Score" />
+            <figcaption>
+                <li>Punteggio OET necessario</li>
+            </figcaption>
+        </figure>
+
+        <p>Non raggiungete tale punteggio? Aspettate ad iniziare il processo di registrazione! La
+            registrazione infatti deve essere effettuata solo se si possiede il punteggio minimo
+            richiesto. In caso contrario <em>la vostra richiesta verrà annullata e non verrete
+                rimborsati della rata pagata!</em></p>
+
+
+        <p>A questo punto ci troveremo davanti la sezione D da compilare, come da seguente foto:</p>
+
+
+        <figure id="image">
+            <img src="{% static 'img/sezD.jpg' %}" alt="Sezione D" />
+        </figure>
+
+        <p>
+            Qui vi è richiesto di inserire i dati di una carta di credito per il pagamento di 350€,
+            ovvero una quota della tassa di iscrizione per il NMBI
+            (ci sono due quote, parleremo della seconda in seguito), obbligatoria per poter ricevere
+            l'application.
+        </p>
+        <p><b>
+                Potrete usare una qualsiasi carta del circuito Visa, Visa Debit o MasterCard.</b></p>
+
+        <p> Ed ora una domanda che in molti si pongono: <strong><em>Posso utilizzare la
+                    Postepay?</em></strong> La risposta è si!.</p>
+
+        <p>Un'altra domanda molto frequente a cui voglio dare una risposta è la seguente:<br>
+            <b><em>Posso inserire i dati della mia Postepay anche se al momento non ho soldi
+                    caricati?</em></b> La risposta è nuovamente si!
+            Infatti il NMBI prenderà i soldi dopo alcuni giorni (di solito passano 1 o 2 settimane),
+            quindi avete tempo di fare una ricarica sulla vostra prepagata.
+
+        </p>
+        <p>Ed ora? Ora dovete inviare il tutto all' indirizzo che segue:
+            <p />
+            <address><em><a name="address">
+                        <p>An Bord Altranais<br>
+                            18/20 Carysfort Avenue<br>
+                            Blackrock<br>
+                            Co Dublin<br>
+                            Ireland</p>
+                    </a></em></address>
+            </address>
+
+            <p>
+                Ora puoi scegliere il metodo di spedizione che più preferisci, io raccomando il metodo
+                postale <em>Postapriority Internazionale</em>,
+                che impiega circa 3 giorni lavorativi (esclusi sabato e festivi) oltre il giorno di
+                spedizione ed ha un costo di 7€ circa.
+            </p>
+    </div>
+</div>
+<!--./La Registrazione-->
+
+{% endblock %}

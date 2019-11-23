@@ -3,6 +3,19 @@
 {% block content %}
 <h1>Esperienze</h1>
 
+<div class="row">
+    {% for experience in experiences %}
+    <div class="col-sm-12 col-md-3 col-lg-4">
+        <h4>{{experience.title}}</h4>
+        <h6>{{experience.author}}</h6>
+        <p>{{experience.content|truncatewords:150|safe}}</p>
+        <div class="container">
+            <a href="{% url 'get_experience_details' experience.id %}" class="btn btn-info">Leggi
+                l'articolo</a>
+        </div>
+    </div>
+    {%endfor%}
+</div>
 
 
 {% endblock %}

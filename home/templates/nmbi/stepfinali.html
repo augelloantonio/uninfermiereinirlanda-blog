@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<!--List Urls-->
+<ul>
+    <li><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
+    <li><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
+    <li><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
+    <li><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
+    <li><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi Finali</a></li>
+</ul>
+<!--./List Urls-->
+
+<!-- Documenti -->
+<div class="blog-post">
+    <h2 class="blog-post-title">Passi finali</h2>
+
+    <p>Dopo aver inviato tutti i documenti dovrete aspettare alcuni giorni/settimane che il NMBI
+        riceva i vostri documenti e li controlli, il processo potrebbe durare anche mesi. In questo
+        lasso di tempo potrete verificare sulla vostra pagina personale del sito del NMBI
+        l'avanzamento della richiesta.</p>
+    <p>Se tutto è andato a buon fine vi verrà inviato per email o per posta il Credit/Debit Mandate,
+        ovvero il documento con cui vi verranno richiesti nuovamente i dati della vostra Carda di
+        Credico/Debito per effettuare il pagamento di 145€, ovvero l'ultimo pagamento prima di
+        ricevere la vostra Decision Letter.</p>
+</div>
+<!-- ./Documenti-->
+
+{% endblock %}

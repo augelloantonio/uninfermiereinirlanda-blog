@@ -3,21 +3,19 @@
 <div class="row">
     <div class="col-md-2 col-sm-3 text-center">
         <img src="/media/img/user.png" class="img-circle">
-        <p><span class="boldtext">Author:</span> {{post.author}}</p>
+        <p><span class="boldtext">Author:</span> {{experience.author}}</p>
     </div>
     <div class="col-sm-10 col-md-9">
-        {% if post.image %}
+        {% if experience.image %}
         <img class="img-blogpost" src="/media/{{ post.image }}">
         {% endif %}
-        <h3>{{ post.title }}</h3>
+        <h3>{{experience.title}}</h3>
         <div class="row">
             <div class="col-xs-9">
-                <p>{{ post.content|safe }}</p>
+                <p>{{ experience.content|safe }}</p>
                 <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-                <a href="{% url 'get_blog' %}" class="btn btn-default">Back to Blog</a>
-                <a href="{% url 'edit_post' post.id %}" class="btn btn-default">Edit Post</a>
+                <p><span class="boldtext">Views:</span> {{experience.views}}</p>
+                <a href="{% url 'get_experiences' %}" class="btn btn-default">Torna a Esperienze</a>
                 <hr>
             </div>
         </div>

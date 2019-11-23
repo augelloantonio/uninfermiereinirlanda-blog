@@ -12,7 +12,7 @@
         <!-- Check if product has comment-->
         {% if comment_list%}
         <div class="row">
-            {% for comment in comments %}
+            {% for comment in comment_list %}
             <!-- comment cards-->
             <div class="col-12 mt-2 mb-2">
                 <div class="mainflip h-100">
@@ -20,9 +20,7 @@
                         <div class="card h-100">
                             <div class="row">
                                 <div class="col-md-2 col-sm-3 text-center">
-                                    <a class="story-img" href="#">
-                                        <img src="/media/img/profile.jpg" class="img-circle">
-                                    </a>
+                                    <img src="/media/img/user.png" class="img-circle">
                                 </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="card-body text-center h-100">
