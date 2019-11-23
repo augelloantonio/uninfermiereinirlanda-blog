@@ -31,38 +31,46 @@
     <!-- Navigation -->
     <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar-grey-transparent">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="navbar-header text-center">
+                <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand navbar-text" href="{% url 'index' %}">Un Infermiere in Irlanda</a>
+                <a class="navbar-brand navbar-text text-center" href="{% url 'index' %}">Un Infermiere in
+                    Irlanda</a>
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto ">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'nmbi' %}">NMBI</a>
+                    </li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'get_experiences' %}">
+                            Esperienze</a></li>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'get_blog' %}">
+                            Blog</a></li>
+                    {% if user.is_superuser %}
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'new_post' %}">New Post</a>
+                    </li>
+                    {% endif %}
                     {% if user.is_authenticated %}
-                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'profile' %}"><i
-                                class="fa fa-user"></i>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'profile' %}"><i class="fa fa-user"></i>
                             Profile</a></li>
-                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'logout' %}"><i
-                                class="fas fa-sign-out-alt"></i>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i>
                             Log
                             Out</a></li>
                     {% else %}
-                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'register' %}"><i
-                                class="fa fa-user-plus"></i>
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'register' %}"><i class="fa fa-user-plus"></i>
                             Register</a></li>
-                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'login' %}"><i
-                                class="fas fa-sign-in-alt"></i> Log
+                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
+                            href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log
                             In</a></li>
-                    {% endif %}
-                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'get_experiences' %}">
-                            Esperienze</a></li>
-                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'get_blog' %}">
-                            Blog</a></li>
-                    {% if user.is_superuser %}
-                    <li class="nav-item active"><a class="nav-link navbar-text" href="{% url 'new_post' %}">New Post</a>
-                    </li>
                     {% endif %}
                 </ul>
             </div>

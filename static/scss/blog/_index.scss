@@ -7,3 +7,59 @@
 .logopage {
     width: 100%;
 }
+
+/*--------------------------------------------Heading*/
+
+header {
+    margin: 0;
+}
+
+.heading {
+    margin-left: 50px;
+}
+
+
+.menuitem {
+    height: 250px;
+    text-align: center;
+    padding: 0;
+}
+
+.menuitem a {
+    width: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    height: 120px;
+}
+
+
+.menuitem a i {
+    padding-top: 22px;
+    display: block;
+    color: #fafafa;
+    font-size: 26px;
+}
+
+.menuitem span {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.list-inpage {
+    display: contents;
+}
+
+.menuitems-hovered:hover {
+    background: rgba(0, 0, 0, 0.48);
+}
+
+.index-card {
+    margin: 30px 10px;
+    box-shadow: 0 0 8px 1px #888888;
+}

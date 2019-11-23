@@ -1,6 +1,6 @@
 @media (max-width:992px) {
     .navbar-header {
-        width: 70%;
+        width: 100%;
     }
 }
 
@@ -21,6 +21,13 @@
     color: black !important;
     font-weight: 800;
 }
+
+.navbar-hovered:hover {
+    background-color: #ffffffb8;
+    color: white;
+    border-radius: 10px;
+}
+
 
 @media (max-width: 992px) {
     .navbar-grey-transparent {
