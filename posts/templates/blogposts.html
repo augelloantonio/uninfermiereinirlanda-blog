@@ -2,6 +2,7 @@
 {% block content %}
 
 <h1>Un Infermiere In Irlanda - Le ultime news</h1>
+<a href="{% url 'new_post' %}">Aggiungi un Post</a>
 
 {% for post in posts %}
 <div class="card mt-5 mb-5">
@@ -20,4 +21,14 @@
 </div>
 
 {% endfor %}
+{% endblock %}
+
+{% block script_js %}
+<script>
+    $(document).ready(function () {
+        $('body,html').animate({
+            scrollTop: 250
+        }, 800);
+    });
+</script>
 {% endblock %}

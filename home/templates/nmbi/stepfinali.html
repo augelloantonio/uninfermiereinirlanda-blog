@@ -15,18 +15,33 @@
 <!--./List Urls-->
 
 <!-- Documenti -->
-<div class="blog-post">
-    <h2 class="blog-post-title">Passi finali</h2>
+<div class="row">
+    <div class="container-fluid">
+        <h2 class="blog-post-title">Passi finali</h2>
 
-    <p>Dopo aver inviato tutti i documenti dovrete aspettare alcuni giorni/settimane che il NMBI
-        riceva i vostri documenti e li controlli, il processo potrebbe durare anche mesi. In questo
-        lasso di tempo potrete verificare sulla vostra pagina personale del sito del NMBI
-        l'avanzamento della richiesta.</p>
-    <p>Se tutto è andato a buon fine vi verrà inviato per email o per posta il Credit/Debit Mandate,
-        ovvero il documento con cui vi verranno richiesti nuovamente i dati della vostra Carda di
-        Credico/Debito per effettuare il pagamento di 145€, ovvero l'ultimo pagamento prima di
-        ricevere la vostra Decision Letter.</p>
+        <p>Dopo aver inviato tutti i documenti dovrete aspettare alcuni giorni/settimane che il NMBI
+            riceva i vostri documenti e li controlli, il processo potrebbe durare anche mesi. In questo
+            lasso di tempo potrete verificare sulla vostra pagina personale del sito del NMBI
+            l'avanzamento della richiesta.</p>
+        <p>Se tutto è andato a buon fine vi verrà inviato per email o per posta il Credit/Debit Mandate,
+            ovvero il documento con cui vi verranno richiesti nuovamente i dati della vostra Carda di
+            Credico/Debito per effettuare il pagamento di 145€, ovvero l'ultimo pagamento prima di
+            ricevere la vostra Decision Letter.</p>
+    </div>
+</div>
+<div class="w-100 text-right">
+    <p class="mt-5"><a href="{% url 'nmbi_documenti'%}">Precedente</a></p>
 </div>
 <!-- ./Documenti-->
 
+{% endblock %}
+
+{% block script_js %}
+<script>
+    $(document).ready(function () {
+        $('body,html').animate({
+            scrollTop: 250
+        }, 800);
+    });
+</script>
 {% endblock %}

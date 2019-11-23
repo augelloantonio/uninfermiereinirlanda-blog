@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, reverse
+from django.contrib.auth.decorators import login_required
 from .models import Experience
 from comments.models import Comment
 from comments.forms import CommentForm
+from .forms import ExperienceForm
 
 
 def get_experiences(request):
@@ -40,3 +42,10 @@ def get_experience_details(request, id):
                 'comment_list': comment_list}
 
     return render(request, 'experience_details.html', contexts)
+
+
+@login_required
+def add_experience(request):
+    '''Add experience form page'''
+    form = ExperienceForm()
+    return render(request, 'addexperience.html', {'form': form})

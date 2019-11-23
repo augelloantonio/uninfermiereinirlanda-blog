@@ -3,6 +3,7 @@
 {% block content %}
 <h1>Esperienze</h1>
 
+<a href="{%url 'add_experience'%}">Aggiungi la tua esperienza</a>
 <div class="row">
     {% for experience in experiences %}
     <div class="col-sm-12 col-md-3 col-lg-4">
@@ -17,5 +18,14 @@
     {%endfor%}
 </div>
 
+{% endblock %}
 
+{% block script_js %}
+<script>
+    $(document).ready(function () {
+        $('body,html').animate({
+            scrollTop: 250
+        }, 800);
+    });
+</script>
 {% endblock %}

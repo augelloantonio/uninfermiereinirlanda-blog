@@ -14,7 +14,7 @@
 
 <!--La Registrazione-->
 <div class="row">
-    <div class="blog-post">
+    <div class="container-fluid">
         <h2 class="blog-post-title">La registrazione </h2>
 
         <p>
@@ -102,24 +102,46 @@
 
         </p>
         <p>Ed ora? Ora dovete inviare il tutto all' indirizzo che segue:
-            <p />
-            <address><em><a name="address">
-                        <p>An Bord Altranais<br>
-                            18/20 Carysfort Avenue<br>
-                            Blackrock<br>
-                            Co Dublin<br>
-                            Ireland</p>
-                    </a></em></address>
-            </address>
+        </p>
+        <address><em><a name="address">
+                    <p>An Bord Altranais<br>
+                        18/20 Carysfort Avenue<br>
+                        Blackrock<br>
+                        Co Dublin<br>
+                        Ireland</p>
+                </a></em></address>
+        </address>
 
-            <p>
-                Ora puoi scegliere il metodo di spedizione che più preferisci, io raccomando il metodo
-                postale <em>Postapriority Internazionale</em>,
-                che impiega circa 3 giorni lavorativi (esclusi sabato e festivi) oltre il giorno di
-                spedizione ed ha un costo di 7€ circa.
-            </p>
+        <p>
+            Ora puoi scegliere il metodo di spedizione che più preferisci, io raccomando il metodo
+            postale <em>Postapriority Internazionale</em>,
+            che impiega circa 3 giorni lavorativi (esclusi sabato e festivi) oltre il giorno di
+            spedizione ed ha un costo di 7€ circa.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="w-100">
+        <div class="float-right">
+            <ul class='d-flex list-inline'>
+                <li class="col-6"><a href="{% url 'nmbi'%}">Precedente</a></li>
+                <li class="col-6"><a href="{% url 'nmbi_applicazione'%}">Successivo</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <!--./La Registrazione-->
 
+{% endblock %}
+
+{% block script_js %}
+<script>
+    $(document).ready(function () {
+        $('body,html').animate({
+            scrollTop: 250
+        }, 800);
+    });
+</script>
 {% endblock %}
