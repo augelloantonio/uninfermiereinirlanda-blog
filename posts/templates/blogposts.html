@@ -2,25 +2,38 @@
 {% block content %}
 
 <h1>Un Infermiere In Irlanda - Le ultime news</h1>
-<a href="{% url 'new_post' %}">Aggiungi un Post</a>
+{% if request.user.is_superuser %}
+<a href="{% url 'new_post' %}" class="btn btn-primary btn-sm mb-3 mt-3">Aggiungi Nuovo Post</a>
+{% endif %}
+<div class="row">
 
-{% for post in posts %}
-<div class="card mt-5 mb-5">
-    <div class="card-header">
-        <h5 class="card-title"><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Autore: {{post.author}} - {{ post.published_date }}</h6>
+    {% for post in posts %}
+    <div class="col-sm-12 col-md-6 mb-5">
+        <div class="card h-100">
+            <div class="card-header">
+                <h5 class="card-title"><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Autore: {{post.author}} - {{ post.published_date }}</h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ post.content|truncatewords:350 | safe }}</p>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="col-sm card-subtitle mb-2 text-muted mt-3">Visualizzazioni: {{post.views}}</h6>
+                    </div>
+                    <div class="col-sm"><a href="{% url 'post_detail' post.id %}"
+                            class="col-6 btn btn-primary float-right">Leggi
+                            altro</a>
+                    </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="card-body">
-        <p class="card-text">{{ post.content|truncatewords:150 | safe }}</p>
-        <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Leggi altro</a>
-    </div>
-    <div class="card-footer text-muted">
-        <h6 class="card-subtitle mb-2 text-muted mt-3">Visualizzazioni: {{post.views}}</h6>
-    </div>
+    {% endfor %}
 </div>
 
-{% endfor %}
 {% endblock %}
 
 {% block script_js %}

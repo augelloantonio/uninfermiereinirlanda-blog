@@ -23,6 +23,7 @@ from home import urls as urls_home
 from accounts import urls as urls_accounts
 from posts import urls as urls_posts
 from experiences import urls as urls_experiences
+from career import urls as urls_career
 
 
 urlpatterns = [
@@ -33,5 +34,6 @@ urlpatterns = [
     path('accounts/', include(urls_accounts)),
     path('blog/', include(urls_posts)),
     path('esperienze/', include(urls_experiences)),
+    path('career/', include(urls_career)),
     re_path('media/(?P<path>.*)', serve, {'document_root': MEDIA_ROOT}),
 ]
