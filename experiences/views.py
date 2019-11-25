@@ -45,7 +45,14 @@ def get_experience_details(request, id):
 
 
 @login_required
-def add_experience(request):
-    '''Add experience form page'''
-    form = ExperienceForm()
+def add_or_edit_experience(request, pk=None):
+    '''Add career form page'''
+    experience = get_object_or_404(Experience, pk=pk) if pk else None
+    if request.method == "POST":
+        form = ExperienceForm(request.POST, request.FILES, instance=experience)
+        if form.is_valid():
+            experience = form.save()
+            return redirect(get_experience_details, experience.pk)
+    else:
+        form = ExperienceForm(instance=experience)
     return render(request, 'addexperience.html', {'form': form})

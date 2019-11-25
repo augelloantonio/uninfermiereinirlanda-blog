@@ -9,13 +9,14 @@
         {% if experience.image %}
         <img class="img-blogpost" src="/media/{{ post.image }}">
         {% endif %}
-        <h3>{{experience.title}}</h3>
+        <h3>{{experience.titolo}}</h3>
         <div class="row">
             <div class="col-xs-9">
-                <p>{{ experience.content|safe }}</p>
-                <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+                <p>{{ experience.contenuto|safe }}</p>
+                <p><span class="boldtext">Data condivisione:</span> {{ experience.published_date }} </p>
                 <p><span class="boldtext">Views:</span> {{experience.views}}</p>
                 <a href="{% url 'get_experiences' %}" class="btn btn-default">Torna a Esperienze</a>
+                <a href="{% url 'edit_experience' experience.id %}" class="btn btn-default">Modifica Esperienza</a>
                 <hr>
             </div>
         </div>

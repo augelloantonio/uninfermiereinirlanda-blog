@@ -6,7 +6,7 @@ from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 class ExperienceForm(ModelForm):
     class Meta:
         model = Experience
-        fields = ['content']
+        fields = ['titolo', 'contenuto']
         widgets = {
-            'content': SummernoteWidget(attrs={'style': 'border: none;'}),
+            'contenuto': SummernoteWidget(attrs={'style': 'border: none;'}),
         }

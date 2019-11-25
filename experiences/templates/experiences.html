@@ -10,11 +10,11 @@
         <div class="card card-experience h-100">
             <div class="card-header">
                 <h4 class='card-title'><a
-                        href="{% url 'get_experience_details' experience.id %}">{{experience.title}}</a></h4>
+                        href="{% url 'get_experience_details' experience.id %}">{{experience.titolo}}</a></h4>
                 <p class="card-text"><small class="text-muted">Autore: {{experience.author}}</small></p>
             </div>
             <div class="card-body">
-                <p class="card-text">{{experience.content|truncatewords:100|safe}}</p>
+                <p class="card-text">{{experience.contenuto|truncatewords:100|safe}}</p>
             </div>
             <div class="card-footer">
                 <a href="{% url 'get_experience_details' experience.id %}" class="btn btn-primary float-right">Leggi

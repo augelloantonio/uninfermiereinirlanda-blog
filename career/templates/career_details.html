@@ -3,24 +3,21 @@
 <div class="row">
     <div class="col-md-2 col-sm-3 text-center">
         <img src="/media/img/user.png" class="img-circle">
-        <p><span class="boldtext">Author:</span> {{experience.author}}</p>
+        <p><span class="boldtext">Author:</span> {{career.author}}</p>
     </div>
     <div class="col-sm-10 col-md-9">
-        {% if experience.image %}
-        <img class="img-blogpost" src="/media/{{ post.image }}">
-        {% endif %}
-        <h3>{{experience.title}}</h3>
+        <h3>{{career.title}}</h3>
         <div class="row">
             <div class="col-xs-9">
-                <p>{{ experience.content|safe }}</p>
-                <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                <p><span class="boldtext">Views:</span> {{experience.views}}</p>
-                <a href="{% url 'get_experiences' %}" class="btn btn-default">Torna a Esperienze</a>
+                <p>{{ career.content|safe }}</p>
+                <p><span class="boldtext">Data Condivisione:</span> {{ career.published_date }} </p>
+                <p><span class="boldtext">Views:</span> {{career.views}}</p>
+                <a href="{% url 'get_careers' %}" class="btn btn-default">Torna a Offerte di Lavoro</a>
+                <a href="{% url 'edit_career' career.id %}" class="btn btn-default">Modifica Offerta</a>
                 <hr>
             </div>
         </div>
     </div>
 </div>
 
-{% include 'comments.html' %}
 {% endblock %}

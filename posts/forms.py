@@ -7,7 +7,7 @@ class BlogPostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'content', 'tag')
+        fields = ('titolo', 'contenuto', 'tag')
         widgets = {
-            'content': SummernoteWidget(attrs={'style': 'border: none;'}),
+            'contenuto': SummernoteWidget(attrs={'style': 'border: none;'}),
         }

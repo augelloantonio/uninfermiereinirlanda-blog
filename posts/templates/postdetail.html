@@ -9,10 +9,10 @@
         {% if post.image %}
         <img class="img-blogpost" src="/media/{{ post.image }}">
         {% endif %}
-        <h3>{{ post.title }}</h3>
+        <h3>{{ post.titolo }}</h3>
         <div class="row">
             <div class="col-xs-9">
-                <p>{{ post.content|safe }}</p>
+                <p>{{ post.contenuto|safe }}</p>
                 <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
                 <p><span class="boldtext">Views:</span> {{post.views}}</p>
                 <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
