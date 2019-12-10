@@ -2,27 +2,47 @@
 
 {% block content %}
 <h1>Offerte di Lavoro</h1>
-<a href="{%url 'add_career'%}" class="btn btn-primary btn-lg btn-block mt-5 mb-5">Aggiungi una nuova offerta di
-    lavoro</a>
 <div class="row">
-    {% for career in careers %}
-    {% if career.approved == True %}
-    <div class="col-sm-12 mb-3">
-        <div class="card card-experience h-100">
-            <div class="card-header">
-                <h4 class='card-title'><a href="{% url 'get_career_details' career.id %}">{{career.titolo}}</a></h4>
-                <p class="card-text"><small class="text-muted">Autore: {{career.author}}</small></p>
-            </div>
+    <div class="col-sm-12 col-md-8">
+        <a href="{%url 'add_career'%}" class="btn btn-primary btn-lg btn-block mt-5 mb-5">Aggiungi una nuova offerta di
+            lavoro</a>
+        <div class="row">
+            {% for career in careers %}
+            {% if career.approved == True %}
+            <div class="col-sm-12 mb-3">
+                <div class="card card-experience h-100">
+                    <div class="card-header">
+                        <h4 class='card-title'><a href="{% url 'get_career_details' career.id %}">{{career.titolo}}</a>
+                        </h4>
+                        <p class="card-text"><small class="text-muted">Autore: {{career.author}}</small></p>
+                        <p class="card-text">Città: {{career.città}} </p>
+                    </div>
 
-            <div class="card-footer">
-                <a href="{% url 'get_career_details' career.id %}" class="btn btn-primary float-right">Leggi
-                    l'offerta</a>
-            </div>
+                    <div class="card-footer">
+                        <a href="{% url 'get_career_details' career.id %}" class="btn btn-primary float-right">Leggi
+                            l'offerta</a>
+                    </div>
 
+                </div>
+            </div>
+            {% endif %}
+            {%endfor%}
         </div>
     </div>
-    {% endif %}
-    {%endfor%}
+    <div class="col-sm-12 col-md-4">
+        <h3>Offerte di Lavoro Recenti </h3>
+        <ul>
+            {% for career in careers %}
+            {% if career.approved == True %}
+
+            <li><a href="{% url 'get_career_details' career.id %}">{{career.titolo}}</a></li>
+
+            {% endif %}
+            {%endfor%}
+        </ul>
+
+
+    </div>
 </div>
 
 {% endblock %}

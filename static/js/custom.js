@@ -1,52 +1,52 @@
-/**
- * This function will give to the navbar the effect to hide it scrolling down by
- * moving the navbar out the viewport of the user adding the style "top: -50px";
- * When the page scroll up the bar will appear again by adding back the style "top: 0".
- * The scrolling has a transition effect added in the css file
- */
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+    var debug = true;
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-    if (window.pageYOffset >= 60) {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "";
-        } else {
-            document.getElementById("navbar").style.top = "-60px";
+    function mylog(message) {
+        if (debug) {
+            console.log(message);
         }
-        prevScrollpos = currentScrollPos;
     }
-};
-
-// jQuery functions
-$(document).ready(function () {
-    //collapse sidebar in dashboard
-
-    $(".btn-expand-collapse").click(function (e) {
-        $("#sidebar-wrapper").toggleClass("collapsed");
-    });
-
-    // Add style to total price if discount code is applied
-    if ($("#new_total").is(":visible")) {
-        $("#total").addClass("basic_price_lined");
-    } else {
-        $("#total").removeClass("basic_price_lined");
+    var pulsante = new function() {
+        this.countClick = 0;
+        this.init = function() {
+            mylog('Init-begin');
+            this.countClick = 0;
+            this.IGTbindEvent();
+            mylog('Init-end');
+        };
+        this.incrementClick = function() {
+            this.countClick++;
+            $('#counter').html('Numero totale click ' + this.countClick)
+            mylog('--- click = ' + this.countClick);
+        };
+        this.IGTunbindEvent = function() {
+            $('#buz').unbind('mousedown mouseup');
+            //clearInterval(interval);
+            //clearTimeout(testTime);
+        };
+        this.IGTbindEvent = function() {
+            $('#buz').bind('mousedown mouseup', function(event) {
+                var evtType = event.type;
+                switch (evtType) {
+                    case 'mousedown':
+                        // incrementClick
+                        this.incrementClick();
+                        break;
+                    case 'mouseup':
+                        break;
+                    default:
+                        break;
+                }
+            });
+        };
     }
-
-    // Auto Hide Messages
-    setTimeout(function () {
-        $(".alert").hide();
-    }, 4000);
-});
-
-// Add script for spinner
-$("#quantityspinner").TouchSpin({
-    buttondown_class: "btn btn-link",
-    buttonup_class: "btn btn-link"
-});
-
-// Search Form activator
-function searchToggle() {
+    $(document).ready(function() {
+        pulsante.init();
+    })
+</script>
+<input type="button" id="buz" value="Premi qui" />
+<p id="counter"></p>e() {
     if ($("#input-search").hasClass("hidden-input")) {
         $("#input-search").removeClass("hidden-input");
     } else {
@@ -75,3 +75,29 @@ function sendMail(contactForm) {
         );
     return false; // To block from loading a new page
 }
+
+
+
+var myNamespace = (function () {
+    var myVar1, myMethod1;
+    myVar1 = 0;
+    myMethod1 = function (foo) {
+        console.log(foo);
+    };
+    return {
+        myVar2: "foo",
+        // A public function utilizing privates
+        myMethod2: function (bar) {
+            // Increment our private counter
+            myVar1++;
+            // Call our private method using bar
+            myMethod1(bar);
+        }
+    };
+});
+
+console.log(myNamespace.myVar1);
+console.log(myNamespace.myVar2);
+myNamespace.myMethod1('Method1 call');
+myNamespace.myMethod2('Method2 call');
+console.log(myNamespace.myVar1);

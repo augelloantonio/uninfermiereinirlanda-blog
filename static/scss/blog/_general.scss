@@ -73,8 +73,12 @@ hr {
 
 .card {
     box-shadow: 0 0 8px 1px #888888;
+    margin: 0px 10px 0px 10px;
 }
 
+.card:hover {
+    box-shadow: 0 0 15px 8px #888888;
+}
 
 /*--------------------------------------------Colors*/
 

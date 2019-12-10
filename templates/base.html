@@ -54,11 +54,6 @@
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
                             href="{% url 'get_blog' %}">
                             Blog</a></li>
-                    {% if user.is_superuser %}
-                    <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
-                            href="{% url 'new_post' %}">New Post</a>
-                    </li>
-                    {% endif %}
                     {% if user.is_authenticated %}
                     <li class="nav-item active navbar-hovered"><a class="nav-link navbar-text"
                             href="{% url 'profile' %}"><i class="fa fa-user"></i>
@@ -103,43 +98,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-xs-12">
-                    <h2>Nurses</h2>
-                    <p class="pr-5 text-white-50">Some description here<i class="fas fa-euro-sign"></i>. </p>
-                    <ul class="list-inline footer-social-links">
-                        <li><a href="#" target="_blank" class="mr-3"><i class="fab sfa-facebook"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/antonio-augello-aba83911a/" target="_blank"><i
-                                    class="fab fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-xs-12 links">
-                    <h4 class="mt-lg-0 mt-sm-3">Links</h4>
-                    <ul class="m-0 p-0 links-list">
-                        <li><a href="{% url 'contact_us'%}" class="links-list-footer">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-xs-12 contact-footer">
-                    <h4 class="mt-lg-0 mt-sm-4 mb-sm-2">Contact Info</h4>
-                    <p class="mb-0">
-                        <i class="fas fa-map-marker mr-3"></i><span class="element-content-text">123, Some Address,
-                            Limerick, Ireland</span>
-                    </p>
-                    <p class="mb-0"><i class="fas fa-phone mr-3"></i><a href="tel:+353 20 912 8500"
-                            class="element-content-text">
-                            +353 20 912 8500
-                        </a></p>
-                    <p><i class="fas fa-envelope mr-3"></i><a href="mailto:info@buyit.com" class="element-content-text">
-                            info@buyit.com
-                        </a>
-                    </p>
+                    <h2 class="text-light">Un Infermiere in Irlanda</h2>
                 </div>
             </div>
-            <hr>
             <div class="row">
                 <div class="col copyright">
-                    <p><small class="text-white-50">Un Infermiere In Irlanda</small></p>
-
-                    <p><small class="text-white-50">Antonio Augello Developer © 2019. All Rights
+                    <p><small class="text-white-50">Antonio Augello © 2019. All Rights
                             Reserved.</small></p>
                 </div>
             </div>
@@ -150,7 +114,6 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}">
     </script>
 

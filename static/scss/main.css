@@ -71,6 +71,12 @@ hr {
 .card {
   -webkit-box-shadow: 0 0 8px 1px #888888;
           box-shadow: 0 0 8px 1px #888888;
+  margin: 0px 10px 0px 10px;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0 15px 8px #888888;
+          box-shadow: 0 0 15px 8px #888888;
 }
 
 /*--------------------------------------------Colors*/
@@ -381,5 +387,9 @@ header {
   margin: 30px 10px;
   -webkit-box-shadow: 0 0 8px 1px #888888;
           box-shadow: 0 0 8px 1px #888888;
+}
+
+figure {
+  max-width: 75%;
 }
 /*# sourceMappingURL=main.css.map */

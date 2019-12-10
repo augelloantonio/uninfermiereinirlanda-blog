@@ -8,6 +8,7 @@ from .forms import CareerForm
 
 def get_careers(request):
     careers = Career.objects.all().order_by('-published_date')
+
     conexts = {'careers': careers}
     return render(request, 'careerlist.html', conexts)
 
