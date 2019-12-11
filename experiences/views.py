@@ -52,8 +52,9 @@ def add_or_edit_experience(request, pk=None):
         form = ExperienceForm(request.POST, request.FILES, instance=experience)
         if form.is_valid():
             experience = form.save()
-            messages.success(request, 'Grazie per aver condiviso la tua esperienza, presto sarà approvata dai nostri admin e resa pubblica.)
-            return redirect(get_experience_details, experience.pk)
+            messages.success(
+                request, 'Grazie per aver condiviso la tua esperienza, presto sarà approvata dai nostri admin e resa pubblica.')
+            return redirect(get_experiences)
     else:
         form = ExperienceForm(instance=experience)
     return render(request, 'addexperience.html', {'form': form})

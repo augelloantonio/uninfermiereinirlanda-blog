@@ -11,6 +11,12 @@
         <a href="{%url 'add_career'%}" class="btn btn-primary btn-lg btn-block mt-5 mb-5">Segnala una nuova offerta di
             lavoro</a>
         <div class="row">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" role="alert">
+                {{ message }} </div>
+            {% endfor %}
+            {% endif %}
             {% if careers %}
             {% for career in careers %}
             {% if career.approved == True %}
