@@ -31,6 +31,7 @@ def add_or_edit_career(request, pk=None):
         form = CareerForm(request.POST, request.FILES, instance=career)
         if form.is_valid():
             career = form.save()
+            messages.success(request, 'Grazie per aver segnalato questa offerta di lavoro, presto sarà approvata dai nostri admin e resa pubblica.)
             return redirect(get_career_details, career.pk)
     else:
         form = CareerForm(instance=career)
