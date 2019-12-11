@@ -39,8 +39,11 @@
             {% endif %}
             {%endfor%}
             {%else%}
-            <h3>Non ci sono state segnalate offerte al momento.</h3>
-            <h4>Hai un'offerta da segnalare? <a href="{%url 'login'%}">Accedi</a> e condividila con la community.</h4>
+            <div class="container">
+                <h3>Non ci sono state segnalate offerte al momento.</h3>
+                <h4>Hai un'offerta da segnalare? <a href="{%url 'login'%}">Accedi</a> e condividila con la community.
+                </h4>
+            </div>
             {% endif %}
         </div>
     </div>
