@@ -8,9 +8,10 @@
 <h1>Offerte di Lavoro</h1>
 <div class="row">
     <div class="col-sm-12 col-md-8">
-        <a href="{%url 'add_career'%}" class="btn btn-primary btn-lg btn-block mt-5 mb-5">Aggiungi una nuova offerta di
+        <a href="{%url 'add_career'%}" class="btn btn-primary btn-lg btn-block mt-5 mb-5">Segnala una nuova offerta di
             lavoro</a>
         <div class="row">
+            {% if careers %}
             {% for career in careers %}
             {% if career.approved == True %}
             <div class="col-sm-12 mb-3">
@@ -31,6 +32,10 @@
             </div>
             {% endif %}
             {%endfor%}
+            {%else%}
+            <h3>Non ci sono state segnalate offerte al momento.</h3>
+            <h4>Hai un'offerta da segnalare? <a href="{%url 'login'%}">Accedi</a> e condividila con la community.</h4>
+            {% endif %}
         </div>
     </div>
     <div class="col-sm-12 col-md-4">
