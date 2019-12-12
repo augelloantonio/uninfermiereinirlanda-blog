@@ -5,24 +5,27 @@
 
 
 <!--List Urls-->
-<ul style="list-style-type: decimal;">
-    <li><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
-    <li><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
-    <li><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
-    <li><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
-    <li><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi Finali</a></li>
-</ul>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
+        <li class="breadcrumb-item font-weight-bold "><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application
+                Form</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi
+                Finali</a></li>
+    </ol>
+</nav>
 <!--./List Urls-->
 
 <!-- Application Form-->
 <div class="row">
     <div class="container-fluid">
         <h2 class="blog-post-title">L'Application Form </h2>
-        <figure id="application">
-            <img src="{% static 'img/application.png' %}" class="mt-3 mb-3" alt="application" />
-        </figure>
-
-
+        <div class="mx-auto w-75 mt-5 mb-5">
+            <img src="https://images.pexels.com/photos/256467/pexels-photo-256467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                class="application-img" alt="application" />
+        </div>
         <p>
             Dopo 2 o 3 settimane, se avete seguito tutte le istruzioni e se non ci sono ritardi con il
             servizio di spedizione dovreste finalmente ricevere il vostro Application Pack.
@@ -45,9 +48,7 @@
             <br>
             Vi troverete davanti a questa schermata:
             <br><br>
-            <figure id="image2">
-                <img src="{% static 'img/account.jpg' %}" alt="Account" />
-            </figure>
+            <img src="{% static 'img/account.jpg' %}" class="mt-3 mb-3 w-50" alt="Account" />
         </p>
 
         <p>

@@ -1,4 +1,7 @@
-$font-stack: Helvetica,
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+$font-stack: 'Roboto',
 sans-serif;
 $primary-color: #333;
 
@@ -137,4 +140,12 @@ hr {
 
 .ui-menu-color-interests {
     background-color: #e74c3c;
+}
+
+
+
+/************************** Text Formatting******/
+
+.blog-post-title {
+    font-weight: bold !important;
 }

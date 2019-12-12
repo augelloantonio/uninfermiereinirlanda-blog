@@ -5,20 +5,27 @@
 
 
 <!--List Urls-->
-<ul style="list-style-type: decimal;">
-    <li><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
-    <li><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
-    <li><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
-    <li><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
-    <li><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi Finali</a></li>
-</ul>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb ">
+        <li class="breadcrumb-item"><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
+        <li class="breadcrumb-item font-weight-bold" aria-current="page"><a href="{% url 'nmbi_passifinali'%}">NMBI -
+                Passi
+                Finali</a></li>
+    </ol>
+</nav>
 <!--./List Urls-->
 
 <!-- Documenti -->
 <div class="row">
     <div class="container-fluid">
         <h2 class="blog-post-title">Passi finali</h2>
-
+        <div class="mx-auto w-50 mt-5 mb-5 ">
+            <img src="https://images.pexels.com/photos/261621/pexels-photo-261621.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                class="application-img" alt="success" />
+        </div>
         <p>Dopo aver inviato tutti i documenti dovrete aspettare alcuni giorni/settimane che il NMBI
             riceva i vostri documenti e li controlli, il processo potrebbe durare anche mesi. In questo
             lasso di tempo potrete verificare sulla vostra pagina personale del sito del NMBI

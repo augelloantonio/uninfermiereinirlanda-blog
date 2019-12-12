@@ -5,13 +5,17 @@
 
 
 <!--List Urls-->
-<ul style="list-style-type: decimal;">
-    <li><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
-    <li><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
-    <li><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
-    <li><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
-    <li><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi Finali</a></li>
-</ul>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
+        <li class="breadcrumb-item font-weight-bold "><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a>
+        </li>
+        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi
+                Finali</a></li>
+    </ol>
+</nav>
 <!--./List Urls-->
 
 <!-- Documenti -->

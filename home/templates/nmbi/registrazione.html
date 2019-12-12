@@ -3,13 +3,17 @@
 {% block content %}
 
 <!--List Urls-->
-<ul style="list-style-type: decimal;">
-    <li><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
-    <li><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
-    <li><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
-    <li><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
-    <li><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi Finali</a></li>
-</ul>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
+        <li class="breadcrumb-item font-weight-bold "><a href="{% url 'nmbi_registrazione'%}">NMBI - Come
+                Registrarsi</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi
+                Finali</a></li>
+    </ol>
+</nav>
 <!--./List Urls-->
 
 <!--La Registrazione-->
@@ -41,7 +45,7 @@
         </p>
 
         <figure id="image">
-            <img src="{% static 'img/sezb.png' %}" alt="Sezione B" />
+            <img src="{% static 'img/sezb.png' %}" class="mt-3 mb-3 w-75" alt="Sezione B" />
         </figure>
 
 
@@ -55,16 +59,16 @@
                 come segue:</b></p>
 
         <figure id="image3">
-            <img src="{% static 'img/ieltsscore.jpg' %}" alt="Ielts Score" />
-            <figcaption>
+            <img src="{% static 'img/ieltsscore.jpg' %}" class="mt-3 w-75" alt="Ielts Score" />
+            <figcaption class="mb-3 ">
                 <li>Punteggio IELTS necessario</li>
             </figcaption>
 
         </figure>
 
         <figure id="image3">
-            <img src="{% static 'img/oetscore.jpg' %}" alt="OET Score" />
-            <figcaption>
+            <img src="{% static 'img/oetscore.jpg' %}" class="mt-3 w-75" alt="OET Score" />
+            <figcaption class="mb-3 ">
                 <li>Punteggio OET necessario</li>
             </figcaption>
         </figure>
@@ -79,7 +83,7 @@
 
 
         <figure id="image">
-            <img src="{% static 'img/sezD.jpg' %}" alt="Sezione D" />
+            <img src="{% static 'img/sezD.jpg' %}" class="mt-3 mb-3 w-75" alt="Sezione D" />
         </figure>
 
         <p>

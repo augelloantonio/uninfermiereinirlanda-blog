@@ -4,13 +4,16 @@
 {% block content %}
 
 <!--List Urls-->
-<ul style="list-style-type: decimal;">
-    <li><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
-    <li><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
-    <li><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
-    <li><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
-    <li><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi Finali</a></li>
-</ul>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item font-weight-bold"><a href="{% url 'nmbi'%}">NMBI - Introduzione</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_registrazione'%}">NMBI - Come Registrarsi</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_applicazione'%}">NMBI - L'Application Form</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'nmbi_documenti'%}">NMBI - Documenti Necessari</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="{% url 'nmbi_passifinali'%}">NMBI - Passi
+                Finali</a></li>
+    </ol>
+</nav>
 <!--./List Urls-->
 
 <!--NMBI-->
@@ -18,9 +21,10 @@
     <div class="container-fluid">
         <h2 class="blog-post-title">NMBI - Nursing and Midwifery Board of Ireland
         </h2>
-
-        <img src="{% static 'img/logo.png' %}" alt="logo" />
-        <br>
+        <div class="mx-auto w-75 mt-5 mb-5">
+            <img src="https://images.pexels.com/photos/1764956/pexels-photo-1764956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                class="application-nmbi-logo application-img" alt="logo" />
+        </div>
         <p>
             <a href="http://www.nmbi.ie/Home" target="_blank">NMBI</a> - Nursing and Midwifery Board of
             Ireland – E’ l’equivalente del <abbr title="Nursing and Midwifery Council">NMC</abbr>
