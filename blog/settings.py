@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1', 'uninfermiereinirlanda.herokuapp.com', 'https://techsini.com']
+    '127.0.0.1', 'uninfermiereinirlanda.herokuapp.com']
 
 
 # Application definition
