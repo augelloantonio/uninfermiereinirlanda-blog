@@ -6,15 +6,16 @@
 
 
 {% block content %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} mb-3 mt-3" role="alert">
+    {{ message }} </div>
+{% endfor %}
+{% endif %}
+
 <h1>Esperienze</h1>
 <a href="{%url 'add_experience'%}" class="btn btn-primary btn-lg btn-block mt-5 mb-5">Aggiungi la tua esperienza</a>
 <div class="row">
-    {% if messages %}
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} mb-3 mt-3" role="alert">
-        {{ message }} </div>
-    {% endfor %}
-    {% endif %}
     {% for experience in experiences %}
     {% if experience.approved == True %}
     <div class="col-sm-12 col-md-12 col-lg-6 mb-3">
